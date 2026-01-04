@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter & Verse Bookshop | Books</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-book"></i>
+                <h1>Chapter & Verse</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Books</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="cart-icon">
+                    <a href="#">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </li>
+                <li>
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="products-header">
+            <h1>Our Book Collection</h1>
+            <p>Browse our curated selection of fiction, non-fiction, classics, and new releases</p>
+            <div class="category-filter">
+                <button class="category-btn active" data-category="all">All Books</button>
+                <button class="category-btn" data-category="fiction">Fiction</button>
+                <button class="category-btn" data-category="nonfiction">Non-Fiction</button>
+                <button class="category-btn" data-category="classics">Classics</button>
+            </div>
+        </section>
+
+        <section class="products-grid">
+            <!-- Book 1 -->
+            <div class="product-card" data-category="fiction">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="The Silent Patient">
+                    <span class="bestseller">Bestseller</span>
+                </div>
+                <div class="product-info">
+                    <h3>The Silent Patient</h3>
+                    <p class="author">Alex Michaelides</p>
+                    <p class="description">A psychological thriller about a woman who shoots her husband and then stops speaking.</p>
+                    <div class="product-footer">
+                        <span class="price">ksh 599</span>
+                        <button class="add-to-cart" data-id="1" data-name="The Silent Patient" data-price="12.99">
+                            <i class="fas fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 2 -->
+            <div class="product-card" data-category="nonfiction">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1531346688376-ab6275c4725e?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Atomic Habits">
+                    <span class="new">New</span>
+                </div>
+                <div class="product-info">
+                    <h3>Atomic Habits</h3>
+                    <p class="author">James Clear</p>
+                    <p class="description">A proven framework for building good habits and breaking bad ones.</p>
+                    <div class="product-footer">
+                        <span class="price">ksh 699</span>
+                        <button class="add-to-cart" data-id="2" data-name="Atomic Habits" data-price="16.99">
+                            <i class="fas fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 3 -->
+            <div class="product-card" data-category="classics">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Pride and Prejudice">
+                </div>
+                <div class="product-info">
+                    <h3>Pride and Prejudice</h3>
+                    <p class="author">Jane Austen</p>
+                    <p class="description">The classic romance novel about Elizabeth Bennet and Mr. Darcy.</p>
+                    <div class="product-footer">
+                        <span class="price">ksh 499</span>
+                        <button class="add-to-cart" data-id="3" data-name="Pride and Prejudice" data-price="9.99">
+                            <i class="fas fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 4 -->
+            <div class="product-card" data-category="fiction">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="The Hobbit">
+                </div>
+                <div class="product-info">
+                    <h3>The Hobbit</h3>
+                    <p class="author">J.R.R. Tolkien</p>
+                    <p class="description">Bilbo Baggins goes on an unexpected adventure with a group of dwarves.</p>
+                    <div class="product-footer">
+                        <span class="price">ksh 699</span>
+                        <button class="add-to-cart" data-id="4" data-name="The Hobbit" data-price="14.99">
+                            <i class="fas fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 5 -->
+            <div class="product-card" data-category="nonfiction">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1551029506-0807df4e2031?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Sapiens">
+                </div>
+                <div class="product-info">
+                    <h3>Sapiens: A Brief History of Humankind</h3>
+                    <p class="author">Yuval Noah Harari</p>
+                    <p class="description">Explores the history of human species from the Stone Age to the present.</p>
+                    <div class="product-footer">
+                        <span class="price">ksh 799</span>
+                        <button class="add-to-cart" data-id="5" data-name="Sapiens" data-price="18.99">
+                            <i class="fas fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 6 -->
+            <div class="product-card" data-category="fiction">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="1984">
+                    <span class="bestseller">Bestseller</span>
+                </div>
+                <div class="product-info">
+                    <h3>1984</h3>
+                    <p class="author">George Orwell</p>
+                    <p class="description">A dystopian social science fiction novel about totalitarian regime.</p>
+                    <div class="product-footer">
+                        <span class="price">ksh 599</span>
+                        <button class="add-to-cart" data-id="6" data-name="1984" data-price="11.99">
+                            <i class="fas fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 7 -->
+            <div class="product-card" data-category="classics">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="To Kill a Mockingbird">
+                </div>
+                <div class="product-info">
+                    <h3>To Kill a Mockingbird</h3>
+                    <p class="author">Harper Lee</p>
+                    <p class="description">A novel about racial injustice and loss of innocence in the American South.</p>
+                    <div class="product-footer">
+                        <span class="price"> ksh 600</span>
+                        <button class="add-to-cart" data-id="7" data-name="To Kill a Mockingbird" data-price="10.99">
+                            <i class="fas fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 8 -->
+            <div class="product-card" data-category="nonfiction">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Educated">
+                    <span class="new">New</span>
+                </div>
+                <div class="product-info">
+                    <h3>Educated: A Memoir</h3>
+                    <p class="author">Tara Westover</p>
+                    <p class="description">A memoir about a woman who leaves her survivalist family and goes on to earn a PhD.</p>
+                    <div class="product-footer">
+                        <span class="price">ksh 560</span>
+                        <button class="add-to-cart" data-id="8" data-name="Educated: A Memoir" data-price="15.99">
+                            <i class="fas fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="cart-sidebar">
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+                <button class="close-cart">&times;</button>
+            </div>
+            <div class="cart-items">
+                <!-- Cart items will be added here dynamically -->
+            </div>
+            <div class="cart-total">
+                <p>Total: $<span id="cart-total">0.00</span></p>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+        <div class="cart-overlay"></div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Chapter & Verse</h3>
+                <p>123 Book Street, Literary City, LC 12345</p>
+                <p>Open Mon-Sat: 9am-8pm, Sun: 10am-6pm</p>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 Chapter & Verse Bookshop. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
